@@ -1,0 +1,35 @@
+group 'foo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: "war"
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+dependencies {
+    // test
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:1.10.19"
+
+    // servlet
+    providedCompile "javax.servlet:javax.servlet-api:3.0.1"
+    providedCompile "javax.servlet.jsp:jsp-api:2.2"
+
+    compile "org.springframework:spring-context:4.2.6.RELEASE"
+    compile "org.springframework:spring-webmvc:4.2.6.RELEASE"
+    compile "org.springframework:spring-oxm:4.2.6.RELEASE"
+    testCompile "org.springframework:spring-test:4.2.6.RELEASE"
+
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.6.2'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.1'
+
+//
+//    Uncomment Below to break GsonTest test
+//
+//    testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc:1.1.0.RELEASE'
+}

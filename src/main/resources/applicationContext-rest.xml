@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- Rest Template common -->
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate" >
+		<constructor-arg>
+			<bean class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory" >
+				<property name="readTimeout" value="1000"/>
+				<property name="connectTimeout" value="1000"/>
+			</bean>
+		</constructor-arg>
+	</bean>
+</beans>
