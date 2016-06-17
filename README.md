@@ -3,9 +3,8 @@
 - This repository shows a problem related to spring-restdocs and GsonHttpMessageConverter.
 - This [issue](https://github.com/spring-projects/spring-restdocs/issues/263) is currently opened, and planned to be solved.
 
+## Current Solution
 - As spring-restdocs has compile dependency to jackson-databind, you need to state gson preference clearly for every gson config.
-
-like this,
 
 ```xml
 <!-- Rest Template common -->
